@@ -1,0 +1,248 @@
+[{
+  "_id": {
+    "$oid": "66f093c021d2642549451498"
+  },
+  "categoria": "Lanche",
+  "nome": "Big Burguer",
+  "preco": 20,
+  "descricao": "Lanche completo tamanho gigante",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1727042496402"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1727042648289"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66f094b321d264254945149d"
+  },
+  "categoria": "Lanche",
+  "nome": "Kid Burguer",
+  "preco": 15,
+  "descricao": "Lanche divertido para as crianças",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1727042739572"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1727042739572"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66f095cf21d26425494514a1"
+  },
+  "categoria": "Acompanhamento",
+  "nome": "Batata Frita Média",
+  "preco": 10,
+  "descricao": "Porção de batata frita média ",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1727043023828"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1727043023828"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66f095ea21d26425494514a3"
+  },
+  "categoria": "Acompanhamento",
+  "nome": "Batata Frita Pequena",
+  "preco": 8,
+  "descricao": "Porção de batata frita pequena",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1727043050180"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1727043050180"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66f095f821d26425494514a5"
+  },
+  "categoria": "Acompanhamento",
+  "nome": "Batata Frita Grande",
+  "preco": 13,
+  "descricao": "Porção de batata frita grande",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1727043064512"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1727043064512"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66f096af21d26425494514a8"
+  },
+  "categoria": "Bebida",
+  "nome": "Coca-Cola",
+  "preco": 10,
+  "descricao": "Coca-Cola 500ml",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1727043247873"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1727043247873"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66f096d321d26425494514aa"
+  },
+  "categoria": "Bebida",
+  "nome": "Fanta Guaraná",
+  "preco": 10,
+  "descricao": "Fanta Guaraná 500ml",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1727043283467"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1727043283467"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66f096f121d26425494514ac"
+  },
+  "categoria": "Bebida",
+  "nome": "Fanta Laranja",
+  "preco": 10,
+  "descricao": "Fanta Laranja 500ml",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1727043313633"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1727043313633"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66f0972121d26425494514ae"
+  },
+  "categoria": "Bebida",
+  "nome": "Del Valle Uva",
+  "preco": 10,
+  "descricao": "Del Valle Uva 500ml",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1727043361375"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1727043361375"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66f0973821d26425494514b0"
+  },
+  "categoria": "Bebida",
+  "nome": "Del Valle Laranja",
+  "preco": 10,
+  "descricao": "Del Valle Laranja 500ml",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1727043384531"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1727043384531"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66f0975f21d26425494514b2"
+  },
+  "categoria": "Bebida",
+  "nome": "Água Mineral Crystal Garrafa",
+  "preco": 7,
+  "descricao": "Água Mineral Crystal Garrafa 500ml",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1727043423756"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1727043423756"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66f0986021d26425494514b4"
+  },
+  "categoria": "Sobremesa",
+  "nome": "Sundae",
+  "preco": 10,
+  "descricao": "Sundae sabor baunilha com cobertura de chocolate",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1727043680695"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1727043680695"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "66f098aa21d26425494514b6"
+  },
+  "categoria": "Sobremesa",
+  "nome": "Casquinha",
+  "preco": 8,
+  "descricao": "Uma casquinha de biscoito em forma de cone, recheada com massa gelada de baunilha e cobertura de chocolate",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1727043754687"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1727043754687"
+    }
+  },
+  "__v": 0
+}]
