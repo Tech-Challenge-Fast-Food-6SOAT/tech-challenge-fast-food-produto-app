@@ -1,6 +1,6 @@
-import type { ProdutoUseCase } from '../../../application/usecases/produto';
-import { Produto } from '../../../domain/entities';
-import type { HttpRequest, HttpResponse } from '../../../interfaces/http';
+import type { ProdutoUseCase } from '../../application/usecases/produto';
+import { Produto } from '../../domain/entities';
+import type { HttpRequest, HttpResponse } from '../../interfaces/http';
 
 export class ProdutoController {
   public constructor(private readonly produtoUseCase: ProdutoUseCase) {}
@@ -36,6 +36,7 @@ export class ProdutoController {
           id: produto.id,
           nome: produto.nome,
           categoria: produto.categoria.categoria,
+          descricao: produto.descricao,
           preco: produto.preco,
         },
         statusCode: 200,

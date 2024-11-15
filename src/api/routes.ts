@@ -13,31 +13,31 @@ const apiRoutes = async (app: FastifyInstance): Promise<void> => {
   const produtouseCase = new ProdutoUseCase(produtoGateWay);
   const produtoController = new ProdutoController(produtouseCase);
 
-  app.get('/', async (request, reply) => {
+  app.get('/produtos', async (request, reply) => {
     const response = await produtoController.buscarProdutoPorCategoria(
       request as HttpRequest
     );
     return reply.status(response.statusCode).send(response.data);
   });
 
-  app.get('/:id', async (request, reply) => {
+  app.get('/produto/:id', async (request, reply) => {
     const response = await produtoController.buscarProdutoPorId(
       request as HttpRequest
     );
     return reply.status(response.statusCode).send(response.data);
   });
 
-  app.post('/', async (request, reply) => {
+  app.post('/produto', async (request, reply) => {
     const response = await produtoController.criar(request as HttpRequest);
     return reply.status(response.statusCode).send(response.data);
   });
 
-  app.delete('/', async (request, reply) => {
+  app.delete('/produto', async (request, reply) => {
     const response = await produtoController.excluir(request as HttpRequest);
     return reply.status(response.statusCode).send(response.data);
   });
 
-  app.put('/:id', async (request, reply) => {
+  app.put('/produto/:id', async (request, reply) => {
     const response = await produtoController.editar(request as HttpRequest);
     return reply.status(response.statusCode).send(response.data);
   });
