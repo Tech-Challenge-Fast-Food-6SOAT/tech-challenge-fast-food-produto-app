@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-app
+  name: produto-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nodejs-app
+      app: produto-app
   template:
     metadata:
       labels:
-        app: nodejs-app
+        app: produto-app
     spec:
       containers:
-        - name: nodejs-app
-          image: danilocassola/fiap-lanchonete-produto:v1
+        - name: produto-app
+          image: danilocassola/fiap-lanchonete-produto:v1.1
           ports:
-            - containerPort: 3000
+            - containerPort: 5000
           resources:
             requests:
               memory: 256Mi
@@ -28,5 +28,5 @@ spec:
             - name: MONGODB_URL
               valueFrom:
                 secretKeyRef:
-                  name: nodejs-app-secrets
+                  name: produto-app-secrets
                   key: MONGODB_URL
