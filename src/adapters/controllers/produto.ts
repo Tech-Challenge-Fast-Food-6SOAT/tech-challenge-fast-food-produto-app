@@ -167,6 +167,15 @@ export class ProdutoController {
       const { categoria, nome, preco, descricao } = request.body;
       const { id } = request.params;
 
+      if (!id) {
+        return {
+          data: {
+            err: 'ID do produto é obrigatório!',
+          },
+          statusCode: 400,
+        };
+      }
+
       const newProduto = new Produto(id, categoria, nome, preco, descricao);
 
       await this.produtoUseCase.editar(newProduto);
