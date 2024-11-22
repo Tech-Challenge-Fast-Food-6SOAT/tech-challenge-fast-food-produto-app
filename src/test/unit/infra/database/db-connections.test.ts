@@ -20,7 +20,7 @@ describe('MongoDbConnection', () => {
   });
 
   describe('editar', () => {
-    it('should update a model and return the updated model', async () => {
+    it('should update a document and return the updated document', async () => {
       const params = { id: '123', value: { nome: 'NomeProduto' } };
       const updatedModel = { _id: '123', ...params.value };
       modelMock.findByIdAndUpdate.mockResolvedValue(updatedModel);
@@ -37,7 +37,7 @@ describe('MongoDbConnection', () => {
   });
 
   describe('buscar', () => {
-    it('should find models based on params and return them', async () => {
+    it('should find documents based on params and return them', async () => {
       const params = { categoria: 'Lanche' };
       const foundModels = [
         { _id: '123', nome: 'NomeProduto', categoria: 'Lanche' },
@@ -52,7 +52,7 @@ describe('MongoDbConnection', () => {
   });
 
   describe('buscarUm', () => {
-    it('should find a single model based on params and return it', async () => {
+    it('should find a single document based on params and return it', async () => {
       const params = { _id: '123' };
       const foundModel = { _id: '123', nome: 'NomeProduto' };
       modelMock.findOne.mockResolvedValue(foundModel);
@@ -65,7 +65,7 @@ describe('MongoDbConnection', () => {
   });
 
   describe('excluir', () => {
-    it('should delete a model by ID', async () => {
+    it('should delete a document by ID', async () => {
       const id = '123';
       modelMock.findByIdAndDelete.mockResolvedValue(undefined);
 
