@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/unbound-method */
 import type { Model as ModelType } from 'mongoose';
 
-import { MongoDbConnection } from '../../../infra/database/mongodb/db-connections/db-connections';
+import { MongoDbConnection } from '../../../../infra/database/mongodb/db-connections/db-connections';
 
 describe('MongoDbConnection', () => {
   const modelMock = {
@@ -10,9 +10,9 @@ describe('MongoDbConnection', () => {
     find: jest.fn(),
     findOne: jest.fn(),
     findByIdAndDelete: jest.fn(),
-  } as unknown as jest.Mocked<ModelType<any>>;
+  } as unknown as jest.Mocked<ModelType<unknown>>;
   const mongoDbConnection = new MongoDbConnection(
-    modelMock as unknown as ModelType<any>
+    modelMock as unknown as ModelType<unknown>
   );
 
   beforeEach(() => {

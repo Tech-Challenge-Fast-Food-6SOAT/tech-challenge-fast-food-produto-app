@@ -1,16 +1,16 @@
-import { MongoDbConnection } from '../../../infra/database/mongodb/db-connections/db-connections';
-import { ProdutoDbConnection } from '../../../infra/database/mongodb/db-connections/produto-db-connection';
-import { ProdutoModel } from '../../../infra/database/mongodb/models';
+import { MongoDbConnection } from '../../../../infra/database/mongodb/db-connections/db-connections';
+import { ProdutoDbConnection } from '../../../../infra/database/mongodb/db-connections/produto-db-connection';
+import { ProdutoModel } from '../../../../infra/database/mongodb/models';
 
-jest.mock('../../../infra/database/mongodb/models');
+jest.mock('../../../../infra/database/mongodb/models');
 jest.mock(
-  '../../../infra/database/mongodb/db-connections/db-connections',
+  '../../../../infra/database/mongodb/db-connections/db-connections',
   () => ({
     MongoDbConnection: jest.fn(),
   })
 );
 
-jest.mock('../../../infra/database/mongodb', () => ({
+jest.mock('../../../../infra/database/mongodb', () => ({
   mongoConnection: {
     model: jest.fn().mockReturnValue({
       find: jest.fn(),
