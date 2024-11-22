@@ -1,8 +1,15 @@
 import { App } from '../../../api/app';
 import { Logger } from '../../../infra/logs/logger';
 
-jest.mock('../../../infra/logs/logger');
-jest.mock('../../../api/app');
+jest.mock('../../../infra/logs/logger', () => ({
+  Logger: { error: jest.fn() },
+}));
+
+jest.mock('../../../api/app', () => ({
+  App: {
+    start: jest.fn(),
+  },
+}));
 
 beforeEach(() => {
   jest.clearAllMocks();

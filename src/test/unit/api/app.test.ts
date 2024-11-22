@@ -7,8 +7,10 @@ import { Logger } from '../../../infra/logs/logger';
 
 jest.mock('dotenv');
 jest.mock('fastify');
-jest.mock('../../../infra/logs/logger');
 jest.mock('../../../api/routes', () => jest.fn().mockResolvedValue(undefined));
+jest.mock('../../../infra/logs/logger', () => ({
+  Logger: { info: jest.fn() },
+}));
 
 describe('App', () => {
   const fastifyInstance = {
