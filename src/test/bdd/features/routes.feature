@@ -1,4 +1,4 @@
-Feature: BDD - apiRoutes: buscarProdutoPorId
+Feature: BDD - apiRoutes: /produtos/produto/:id
 
   Scenario: Product is found
     Given a product with ID "123" exists
