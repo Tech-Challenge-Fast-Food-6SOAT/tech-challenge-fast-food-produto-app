@@ -1,8 +1,8 @@
 import { defineFeature, loadFeature } from 'jest-cucumber';
 
-import { ProdutoController } from '../../../adapters/controllers';
-import type { ProdutoUseCase } from '../../../application/usecases/produto';
-import type { HttpRequest, HttpResponse } from '../../../interfaces/http';
+import { ProdutoController } from '@/adapters/controllers';
+import type { ProdutoUseCase } from '@/application/usecases/produto';
+import type { HttpRequest, HttpResponse } from '@/interfaces/http';
 
 const feature = loadFeature(
   './src/test/bdd/features/produtoController.feature'

@@ -1,9 +1,9 @@
 import { defineFeature, loadFeature } from 'jest-cucumber';
 
-import { ProdutoGateway } from '../../../adapters/gateways/produto';
-import { Categoria } from '../../../domain/entities';
-import { Produto } from '../../../domain/entities/produto';
-import type { DbConnection } from '../../../interfaces/db/connection';
+import { ProdutoGateway } from '@/adapters/gateways/produto';
+import { Categoria } from '@/domain/entities';
+import { Produto } from '@/domain/entities/produto';
+import type { DbConnection } from '@/interfaces/db/connection';
 
 const feature = loadFeature('./src/test/bdd/features/produtoGateway.feature');
 

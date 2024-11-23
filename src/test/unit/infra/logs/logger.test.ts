@@ -1,6 +1,6 @@
 import pino from 'pino';
 
-import { Logger } from '../../../../infra/logs/logger';
+import { Logger } from '@/infra/logs/logger';
 
 jest.mock('pino', () =>
   jest.fn().mockImplementation(() => ({

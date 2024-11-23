@@ -1,14 +1,14 @@
 import dotenv from 'dotenv';
 import Fastify from 'fastify';
 
-import { App } from '../../../api/app';
-import routes from '../../../api/routes';
-import { Logger } from '../../../infra/logs/logger';
+import { App } from '@/api/app';
+import routes from '@/api/routes';
+import { Logger } from '@/infra/logs/logger';
 
 jest.mock('dotenv');
 jest.mock('fastify');
-jest.mock('../../../api/routes', () => jest.fn().mockResolvedValue(undefined));
-jest.mock('../../../infra/logs/logger', () => ({
+jest.mock('@/api/routes', () => jest.fn().mockResolvedValue(undefined));
+jest.mock('@/infra/logs/logger', () => ({
   Logger: { info: jest.fn() },
 }));
 

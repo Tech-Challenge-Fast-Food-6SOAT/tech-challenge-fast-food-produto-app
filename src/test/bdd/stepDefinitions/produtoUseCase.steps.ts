@@ -1,8 +1,8 @@
 import { defineFeature, loadFeature } from 'jest-cucumber';
 
-import type { ProdutoGateway } from '../../../adapters/gateways/produto';
-import { ProdutoUseCase } from '../../../application/usecases/produto';
-import type { Produto } from '../../../domain/entities/produto';
+import type { ProdutoGateway } from '@/adapters/gateways/produto';
+import { ProdutoUseCase } from '@/application/usecases/produto';
+import type { Produto } from '@/domain/entities/produto';
 
 const feature = loadFeature('./src/test/bdd/features/produtoUseCase.feature');
 

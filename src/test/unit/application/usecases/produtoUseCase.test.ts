@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/unbound-method */
 // src/test/unit/produtoUseCase.test.ts
-import type { ProdutoGateway } from '../../../../adapters/gateways';
-import { ProdutoUseCase } from '../../../../application/usecases';
-import type { Produto } from '../../../../domain/entities';
-import { Categoria } from '../../../../domain/entities';
+import type { ProdutoGateway } from '@/adapters/gateways';
+import { ProdutoUseCase } from '@/application/usecases';
+import type { Produto } from '@/domain/entities';
+import { Categoria } from '@/domain/entities';
 
 describe('ProdutoUseCase', () => {
   const produtoGateway = {

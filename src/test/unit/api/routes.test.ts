@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/unbound-method */
 import type { FastifyInstance } from 'fastify/types/instance';
 
-import { ProdutoController } from '../../../adapters/controllers';
-import apiRoutes from '../../../api/routes';
+import { ProdutoController } from '@/adapters/controllers';
+import apiRoutes from '@/api/routes';
 
 const mockFastifyInstance = (): jest.Mocked<FastifyInstance> => {
   const fastifyInstance = {
@@ -14,7 +15,7 @@ const mockFastifyInstance = (): jest.Mocked<FastifyInstance> => {
   return fastifyInstance;
 };
 
-jest.mock('../../../infra/database/mongodb', () => ({
+jest.mock('@/infra/database/mongodb', () => ({
   mongoConnection: {
     model: jest.fn().mockReturnValue({
       find: jest.fn(),
@@ -25,13 +26,13 @@ jest.mock('../../../infra/database/mongodb', () => ({
     }),
   },
 }));
-jest.mock('../../../adapters/gateways/produto');
-jest.mock('../../../application/usecases/produto');
-jest.mock('../../../infra/database/mongodb/db-connections');
-jest.mock('../../../infra/database/mongodb');
+jest.mock('@/adapters/gateways/produto');
+jest.mock('@/application/usecases/produto');
+jest.mock('@/infra/database/mongodb/db-connections');
+jest.mock('@/infra/database/mongodb');
 
 jest
-  .mock('../../../adapters/controllers')
+  .mock('@/adapters/controllers')
   .fn(jest.fn().mockResolvedValue({ statusCode: 200, data: [] }));
 ProdutoController.prototype.buscarProdutoPorCategoria = jest.fn();
 ProdutoController.prototype.buscarProdutoPorId = jest.fn();

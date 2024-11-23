@@ -1,8 +1,8 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import { ProdutoGateway } from '../../../../adapters/gateways/produto';
-import { Categoria, Produto } from '../../../../domain/entities';
-import type { DbConnection } from '../../../../interfaces/db/connection';
+import { ProdutoGateway } from '@/adapters/gateways/produto';
+import { Categoria, Produto } from '@/domain/entities';
+import type { DbConnection } from '@/interfaces/db/connection';
 
 describe('ProdutoGateway', () => {
   const dbConnection = {
