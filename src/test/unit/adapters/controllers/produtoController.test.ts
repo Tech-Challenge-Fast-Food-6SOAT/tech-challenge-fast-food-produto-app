@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/init-declarations */
-import { ProdutoController } from '../../adapters/controllers';
-import type { ProdutoUseCase } from '../../application/usecases/produto';
-import { Categoria } from '../../domain/entities';
-import type { HttpRequest, HttpResponse } from '../../interfaces/http';
+import { ProdutoController } from '../../../../adapters/controllers';
+import type { ProdutoUseCase } from '../../../../application/usecases/produto';
+import { Categoria } from '../../../../domain/entities';
+import type { HttpRequest, HttpResponse } from '../../../../interfaces/http';
 
 describe('ProdutoController', () => {
   const produtoUseCase = {
