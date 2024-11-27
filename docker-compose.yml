@@ -9,7 +9,7 @@ services:
       - .:/app/src
     working_dir: /app/src
     environment:
-      - MONGODB_URL=${MONGODB_URL}
+      - MONGODB_CONNECTION_STRING_PRODUTO=${MONGODB_CONNECTION_STRING_PRODUTO}
     networks:
       - default
 
