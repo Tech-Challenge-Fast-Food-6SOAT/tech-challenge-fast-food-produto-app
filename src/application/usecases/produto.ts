@@ -1,6 +1,6 @@
-import type { ProdutoGateway } from '../../../adapters/gateways/produto';
-import type { Categoria } from '../../../domain/entities/categoria';
-import type { Produto } from '../../../domain/entities/produto';
+import type { ProdutoGateway } from '../../adapters/gateways/produto';
+import type { Categoria } from '../../domain/entities/categoria';
+import type { Produto } from '../../domain/entities/produto';
 
 export class ProdutoUseCase {
   public constructor(private readonly produtoGateway: ProdutoGateway) {}

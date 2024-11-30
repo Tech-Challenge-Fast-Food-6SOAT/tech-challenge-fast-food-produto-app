@@ -1,6 +1,6 @@
-import type { ProdutoUseCase } from '../../../application/usecases/produto';
-import { Produto } from '../../../domain/entities';
-import type { HttpRequest, HttpResponse } from '../../../interfaces/http';
+import type { ProdutoUseCase } from '../../application/usecases/produto';
+import { Produto } from '../../domain/entities';
+import type { HttpRequest, HttpResponse } from '../../interfaces/http';
 
 export class ProdutoController {
   public constructor(private readonly produtoUseCase: ProdutoUseCase) {}
@@ -36,6 +36,7 @@ export class ProdutoController {
           id: produto.id,
           nome: produto.nome,
           categoria: produto.categoria.categoria,
+          descricao: produto.descricao,
           preco: produto.preco,
         },
         statusCode: 200,
@@ -165,6 +166,15 @@ export class ProdutoController {
     try {
       const { categoria, nome, preco, descricao } = request.body;
       const { id } = request.params;
+
+      if (!id) {
+        return {
+          data: {
+            err: 'ID do produto é obrigatório!',
+          },
+          statusCode: 400,
+        };
+      }
 
       const newProduto = new Produto(id, categoria, nome, preco, descricao);
 

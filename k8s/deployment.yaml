@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: produto-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: produto-app
+  template:
+    metadata:
+      labels:
+        app: produto-app
+    spec:
+      containers:
+        - name: produto-app
+          image: danilocassola/fiap-lanchonete-produto:v1.1
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              memory: 256Mi
+              cpu: 100m
+            limits:
+              memory: 256Mi
+              cpu: 100m
+          env:
+            - name: MONGODB_CONNECTION_STRING_PRODUTO
+              valueFrom:
+                secretKeyRef:
+                  name: produto-app-secrets
+                  key: MONGODB_CONNECTION_STRING_PRODUTO
